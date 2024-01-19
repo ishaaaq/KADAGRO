@@ -1,13 +1,759 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+:root{
+  --green: #204E51;
+  --transition: all 0.3s linear;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url(fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url(fonts/Raleway-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'raleway-thin';
+  src: url(fonts/Raleway-Thin.ttf);
+
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;
+  transform: translateX(-40%);}
+  100% {opacity: 1;
+    transform: translateX(0);}
+}
+
+@keyframes easeIn {
+  0% {opacity: 0;
+  transform: translateY(20%);}
+  100% {opacity: 1;
+    transform: translateY(0);}
+}
+
+/*================================= NAVBAR =================================*/
+.navBar{
+  width: 1440px;
+  background-color: white;
+  height: 135px;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-size: large;
+  position: relative;
+ }
+
+ .navBar-container{
+  position: fixed;
+  z-index: 2;
+ }
+
+ .logo{
+  margin-left: 25px;
+  position: absolute;
+  top: 7%
+ }
+
+
+ .nav-btn-container{
+  position: absolute;
+  top: 40%;
+  transform: translate(0, -50%);
+  justify-content: space-between;
+ }
+
+ .btn{
+  width: 120px;
+  height: 40px;
+  border: var(--green) 1px solid;
+  border-radius: 10px;
+  background: none;
+ 
+ }
+
+ .login-signup{
+  position: absolute;
+  font-weight: bold;
+  display: inline;
+  right: 5%;
+  top: 35%;
+ }
+
+ .login{
+  font-weight: bold;
+  background: var(--green);
+  color: white;
+  cursor: pointer;
+ }
+
+ .sign-up{
+  font-weight: bold;
+  margin-left: 50px;
+ }
+
+ .sign-up:hover{
+  background: var(--green);
+  color: white;
+  border: var(--green) 1px solid;
+  cursor: pointer;
+ }
+
+ ul{
+	background-color:none;
+	list-style-type:none;
+	padding:65px;
+	text-align:center;
+  color:white;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+ul{
+  display: inline;
+}
+
+ li{
+	display:inline;
+	padding:18px;
+  margin-left: none;
+}
+
+ul li a{
+	text-decoration:none;
+  color: #4d4d4d;
+}
+
+.nav-btn-container{
+  display: inline;
+  margin-left: none;
+  position: relative;
+  margin-right: none;
+ 
+}
+
+
+/*================================= GET STARTED/LEARN MORE =================================*/
+
+#getStarted{
+  background-image:url('images/image 1.png');
+  text-align:center;
+	display:block;
+  width: 1440px;
+  height: 817px;
+  position: relative;
+
+}
+
+#getStarted p{
+  position: absolute;
+  top: 58%;
+  left: 45%;
+  color: white;
+  opacity: 0.9;
+  font-weight: 400;
+  font-size: 16px;
+  }
+
+.getStarted-btn{
+  position: absolute;
+  top: 73%;
+  left: 40%;
+}
+
+.GetStarted{
+  width: 150px;
+  font-weight: bold;
+  background: var(--green);
+  color: white;
+  animation: fadeIn linear 1s;
+  cursor: pointer;
+ }
+
+ .learnMore{
+  width: 150px;
+  font-weight: bold;
+  margin-left: 50px;
+  border: white 1px solid;
+  color: white;
+  animation: fadeIn linear 1s;
+  
+ }
+
+ .learnMore:hover{
+  background: var(--green);
+  color: white;
+  border: var(--green) 1px solid;
+  cursor: pointer;
+ }
+
+#getStarted h1{
+  font-weight: 700;
+  font-size: 90px;
+  width: 800px;
+  overflow-wrap: break-word;
+  position:absolute;
+  top: 15%;
+  left: 23%;
+  color: white;
+  line-height: 93.6px;
+  animation: fadeIn linear 0.7s forwards;
+}
+
+.logo h2{
+  display: inline;
+  top: 20%;
+  left: 110%;
+  position: absolute;
+}
+
+/*================================= SUPPORTING FARMERS =================================*/
+
+.supportingFarmers{
+  width: 1440px;
+  height: 817px;
+  position: relative;
+}
+
+.supportingFarmers h1{
+  width: 620px;
+  height: 300px;
+  overflow-wrap: break-word;
+  top: 25%;
+  left: 87px;
+  grid-row: 1 / 2;
+  grid-column: 1;
+  position: absolute;
+  
+}
+
+.header{
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 74.88px;
+  color: var(--green);
+  
+}
+
+.dash{
+  width: 465px;
+  background-color: var(--green);
+  height: 64px;
+  border-radius: 15px;
+  position: absolute;
+  bottom: 15%;
+  left:198px;
+}
+
+.slider{
+  position: absolute;
+  top: 15%;
+  left: 53%;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.slider button{
+  width: 320px;
+  height: 90px;
+  border: var(--green) 1px solid;
+  color: var(--green);
+  border-radius: 25px;
+  background: white;
+  position:absolute;
+  display: block;
+  font-size: xx-large;
+  bottom: 8%;
+  left: 25%;
+ } 
+  
+
+ /*================================= OUR SERVICES =================================*/
+
+ #OurServices{
+  width: 1244px;
+  height: 508px;
+  text-align: center;
+  position: relative;
+ }
+
+ #OurServices h1{
+  width: 781px;
+  height: 75px;
+  text-align: center;
+  left: 334px;
+  position: absolute;
+ }
+
+ #OurServices .services p{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  height: 60px;
+  color: var(--green);
+  margin-top: 50px;
+ }
+
+ .sub-heading{
+  width: 500px;
+  line-height: 24px;
+  text-align: center;
+  display: block;
+  color: black;
+  overflow-wrap: break-word;
+  left: 475px;
+  top: 25%;
+  position: absolute;
+  font-family: 'raleway';
+ }
+
+ .services-container{
+  position: absolute;
+  display: grid;
+  top: 50%;
+  grid-gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  left: 120px; 
+ }
+
+ .services{
+  width: 281px;
+  height: 281px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0px 2px 4px black; 
+ }
+
+ .services-container :hover{
+  border: white 4px solid;
+ }
+
+ 
+
+ .icon{
+  margin-top: 50px;
+ }
+  
+
+ /*================================= FEATURED PRODUCTS =================================*/
+
+ #featured-products{
+  width: 1440px;
+  height: 836px;
+  margin-top: 150px;
+  position: absolute;
+  display: block;
+  text-align: center;
+ }
+
+ #featured-products P{
+  top: 15%;
+ }
+
+ #featured-products div{
+  top: 30%;
+ }
+
+ #featured-products a{
+  color: var(--green);
+  text-align: center;
+  font-weight: bold;
+  bottom: 0%;
+  left: 46%;
+  position: absolute;
+ }
+
+ .products{
+  width: 281px;
+  height: 508px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0px 2px 4px black; 
+ }
+
+ .products:hover{
+ border: var(--green) 2px solid;
+ }
+
+ .products img{
+  margin-top: 70px;
+ }
+
+ .products h3{
+  font-size: 24px;
+  color: var(--green);
+ }
+
+ .products p{
+  width: 191px;
+  font-size: 16px;
+  line-height: 30px;
+  margin-left: 15%;
+ }
+
+ /*================================= GREENER FUTURE =================================*/
+
+ .greener-future{
+  width: 1440px;
+  height: 629px;
+  position: absolute;
+  background: url("images/image 3.png");
+  margin-top: 1020px;
+ }
+
+ .box{
+  width: 1440px;
+  height: 629px;
+  background: black;
+  opacity: 0.7;
+ }
+
+ .greener-future h1{
+  width: 920px;
+  height: 225px;
+  font-size: 72px;
+  line-height: 74.88px;
+  color: white;
+  overflow-wrap: break-word;
+  top: 37%;
+  left: 87px;
+  position: absolute;
+  opacity: 1;
+ }
+
+ .greener-future .getStarted-btn{
+  left: 87px;
+  top: 85%;
+ }
+
+ /*================================= ABOUT US =================================*/
+
+ #aboutUs{
+  width: 1440px;
+  height: 135px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 90px;
+  margin-top: 1800px;
+ }
+
+ #aboutUs img{
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin-left: 87px;
+
+ }
+
+ #aboutUs .aboutUs-text{
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+ }
+
+ .aboutUs-text p{
+  width: 468.78px;
+  height: 280px;
+  font-size: 26px;
+  line-height: 40px;
+ }
+
+ .aboutUs-text button{
+  width: 213.5px;
+  height: 53.14px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 60px;
+ }
+
+
+ /*================================= TESTIMONIALS =================================*/
+ #testimonials{
+  width: 1440px;
+  height: 900px;
+  margin-top: 800px;
+  position: absolute;
+  text-align: center;
+  overflow: hidden;
+ }
+
+ #testimonials p{
+ width: 550px;
+ height: 48px;
+ top: 13%;
+ left: 31%;
+ }
+
+ .testimonials-btn-container{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 4rem;
+  width: 1440px;
+  height: 671px;
+  opacity: 1;
+  
+  position: relative;
+  align-items: center;
+  left: 0px;
+   }
+
+ .left{
+  grid-column: 1 / 2;
+  cursor: pointer;
+  margin-left: 58px;
+ }
+
+ .right{
+  margin-left: auto;
+  margin-right: none;
+  cursor: pointer;
+ }
+
+ .green{
+  position: absolute;
+  margin-left: 25px;
+  margin-right: 25px;
+  top: 34%;
+  left: 13%;
+  width: 1010px;
+  height: 437px;
+  border-radius: 20px;
+  background: var(--green);
+  display: grid;
+  grid-template-columns: repeat(2);
+  grid-gap: 1px;
+  opacity: 1; 
+  transition: var(--transition);
+ }
+
+ .green-container{
+  display: flex;
+  padding: 20px;
+  
+  height: 500px;
+  overflow: hidden;
+ }
+
+ .testimonials-text{
+  grid-column: 2 / 3;
+  text-align: left;
+  margin-top: 1px;
+  line-height: 17px;
+  color: white;
+ }
+
+ .stars{
+  margin-left: 0px;
+  margin-top: 110px;
+  width: 212px;
+  height: 40px;
+ }
+
+ .stars img{
+  position: absolute;
+  top: 0%;
+  left: 70%;
+ }
+
+ .green img{
+  grid-column: 1 / 2;
+  margin-top: 110px;
+  margin-left: 110px;
+  margin-bottom: auto;
+ }
+
+ .name{
+  font-weight: 600;
+  font-size: 32px;
+ }
+
+ .job{
+  font-weight: 1px;
+  font-size: 16px;
+  font-family: 'raleway-thin';
+ }
+
+
+ .para1{
+  position: absolute;
+  height: 72px;
+  font-family: 'raleway';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  margin-top: 210px;
+  margin-left: 90px
+ }
+
+ .activeSlide {
+  opacity: 1;
+  transform: translateX(0);
+}
+.lastSlide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-100%);
+}
+.nextSlide {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+} 
+
+/*================================= OUR BLOG=================================*/
+.our-blog{
+  width: 1440px;
+  height: 900px;
+  margin-top: 1700px;
+  position: absolute;
+  text-align: center;
+}
+
+.our-blog p{
+  top: 13%;
+  width: 550px;
+ height: 48px;
+}
+
+.blogs-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  left: 100px;
+  top: 25%;
+  position: absolute;
+}
+
+.blog{
+  width: 400px;
+  height: 726px;
+  border-radius: 20px;
+  text-align: left;
+}
+
+.blog h3{
+  color: var(--green);
+  width: 370px;
+  font-size: 32px;
+  
+  line-height: 36.48px;
+}
+
+.blog p{
+  font-family: 'raleway';
+  font-size: 20px;
+  font-family: 300;
+  line-height: 24px;
+  width: 390px;
+  color: #1E1E1E;
+
+}
+
+.blog  a{
+  font-family: 'raleway';
+  font-size: 20px;
+  color: var(--green);
+  position: absolute;
+  bottom: 2px;
+}
+
+/*================================= FOOTER=================================*/
+.footer{
+  width: 1476px;
+  height: 586px;
+  margin-top: 2800px;
+  background: var(--green);
+  box-sizing: border-box;
+  padding: 70px;
+  color: white;
+    display: flex;
+    justify-content:flex-start;
+
+}
+
+
+.footer h2{
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.footer p{
+  font-family: 'raleway-thin';
+  
+  font-size: 20px;
+  line-height: 24px;
+  width: 390px;
+}
+
+.social-icons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+  width: 220px;
+  cursor: pointer;
+}
+
+
+.pages{
+  text-align: left;
+  display: inline;
+}
+
+.pages h4{
+  margin-bottom: 0px;
+  font-size: 28px;
+  font-weight: 700;
+  
+}
+
+ .pages ul{
+  position: relative;
+	background-color:none;
+	list-style-type:none;
+	text-align: left;
+
+ }
+
+
+ .pages li{
+	display:block;
+  padding: 7px;
+}
+
+
+.pages ul li a{
+	text-decoration:none;
+  color: white;
+  font-family: 'raleway-thin';
+}
+
+.pages-about{
+  display: flex;
+  justify-content: space-between;
+  width: 330px;
+  margin-left: 33%;
+  margin-top: 140px;
+}
+
+
+
+
+  body {
+  margin: none;
+  margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+  font-family:'montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f2f2f2;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} 
+
+
